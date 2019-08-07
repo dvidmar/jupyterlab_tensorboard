@@ -72,7 +72,8 @@ function activate(app: JupyterFrontEnd, restorer: ILayoutRestorer, palette: ICom
   let manager = new TensorboardManager();
   let running = new RunningTensorboards({manager: manager});
   running.id = 'jp-Tensorboards';
-  running.title.label = 'Tensorboards';
+  running.title.iconClass = 'jp-SideBar-tabIcon jp-Tensorboard-sidebar-icon';
+  running.title.caption = 'Tensorboards'
   
   const namespace = 'tensorboard';
   const tracker = new WidgetTracker<MainAreaWidget<TensorboardTab>>({ namespace })
